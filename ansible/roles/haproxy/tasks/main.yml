@@ -1,0 +1,22 @@
+# roles/haproxy/tasks/main.yml
+---
+- name: Install HAProxy
+  package:
+    name: haproxy
+
+- name: Setup configuration file
+  template:
+    src: haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+  notify:
+    - reload HAProxy service
+
+- name: Reload configuration
+  service:
+    name: haproxy
+    enabled: true
+    state: started
+
+- name: include tests
+  include_tasks: tests.yml
+  tags: tests

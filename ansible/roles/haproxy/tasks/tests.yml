@@ -1,0 +1,15 @@
+# roles/haproxy/tasks/tests.yml
+---
+- name: Ensure HAProxy accessible at port 8080
+  wait_for:
+    port: 8080
+
+
+- name: Ensure HAProxy accessible at port 80
+  wait_for:
+    port: 80
+
+- name: Ensure HAProxy returns status code 200
+  uri:
+    url: http://127.0.0.1:8080/
+

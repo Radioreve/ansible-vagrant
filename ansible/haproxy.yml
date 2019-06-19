@@ -1,0 +1,9 @@
+# haproxy.yml
+---
+
+- hosts: load-balancers
+  gather_facts: False
+  become: True
+  roles:
+    - role: haproxy
+      tags: haproxy

@@ -1,0 +1,33 @@
+Host haproxy
+  HostName 127.0.0.1
+  User vagrant
+  Port 2203
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/MacLJ/code/tp-ansible/.vagrant/machines/haproxy/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host webserver1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2204
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/MacLJ/code/tp-ansible/.vagrant/machines/webserver1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host webserver2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2205
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/MacLJ/code/tp-ansible/.vagrant/machines/webserver2/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+

@@ -1,0 +1,17 @@
+# install.yml
+---
+
+- hosts: load-balancers
+  gather_facts: false
+  become: true
+  roles: 
+  - role: haproxy
+    tags: haproxy
+
+- hosts: app-servers
+  gather_facts: false
+  become: true
+  roles:
+          - role: tomcat
+            tags: tomcat
+ 
